@@ -1,6 +1,5 @@
 import MainLayout from "@/layouts";
 import { NextPageWithLayout } from "@/types";
-import { Search } from "lucide-react";
 import { ReactElement } from "react";
 
 const Home: NextPageWithLayout = () => {
