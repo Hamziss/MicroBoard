@@ -8,14 +8,12 @@ const Home: NextPageWithLayout = () => {
       className={`flex min-h-screen flex-col items-center justify-center`}
     >
       <h1 className={"text-5xl font-bold"}>MICROBOARD</h1>
-      <p>test ci workflow</p>
-      <p>test discord webhook release</p>
-      <div>sidebar</div>
     </section>
   );
 };
 
 export default Home;
+
 Home.getLayout = function getLayout(page: ReactElement) {
   return <MainLayout>{page}</MainLayout>;
 };
