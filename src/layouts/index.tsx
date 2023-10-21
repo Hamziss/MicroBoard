@@ -5,7 +5,7 @@ export default function MainLayout({
 }) {
   return (
     <>
-      <header>Header</header>
+      <header>Header so much</header>
       <main>{children}</main>
       <footer>Footer</footer>
     </>
