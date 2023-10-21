@@ -3,8 +3,9 @@
 /* eslint-disable @typescript-eslint/no-unsafe-return */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable @typescript-eslint/no-unsafe-call */
+
 import { env } from "@/env.mjs";
-import type { Prisma } from "@prisma/client";
+// import type { Prisma } from "@prisma/client";
 import { PrismaClient } from "@prisma/client";
 import type { Adapter } from "next-auth/adapters";
 
@@ -62,7 +63,7 @@ export function PrismaAdapter(p: any): Adapter {
       } catch (error) {
         // If token already used/deleted, just return null
         // https://www.prisma.io/docs/reference/api-reference/error-reference#p2025ggk
-        if ((error as Prisma.PrismaClientKnownRequestError).code === "P2025")
+        if ((error as any).code === "P2025")
           return null;
         throw error;
       }
