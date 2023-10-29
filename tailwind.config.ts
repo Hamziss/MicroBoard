@@ -16,6 +16,9 @@ module.exports = {
       },
     },
     extend: {
+      padding: {
+        '360px': '360px',
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
