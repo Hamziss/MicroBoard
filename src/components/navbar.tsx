@@ -9,7 +9,7 @@ interface menuItem {
     link: string;
 }
 
-let menuItems: menuItem[] = [
+const menuItems: menuItem[] = [
 
 ]
 
