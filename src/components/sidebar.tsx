@@ -1,11 +1,12 @@
 interface SidebarProps extends React.HTMLAttributes<HTMLElement> {
-    // TODO: Add props
+  // TODO: Add props
 }
 
-export function Sidebar({ }: SidebarProps) {
+
+export function Sidebar({}: SidebarProps) {
     return (
         <>
             Sidebar
         </>
     )
-}
+
