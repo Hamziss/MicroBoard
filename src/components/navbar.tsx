@@ -20,6 +20,7 @@ interface menuItem {
 
 const menuItems: menuItem[] = [];
 
+
 export function NavBar() {
   return (
     <div className="flex h-16 items-center px-4">

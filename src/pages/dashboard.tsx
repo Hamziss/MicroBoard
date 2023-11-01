@@ -1,6 +1,8 @@
 import { Draft } from "@/components/dashboard/draft";
 import { NavBar } from "@/components/navbar";
+
 import { ScrollArea } from "@/components/ui/scroll-area";
+
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -11,6 +13,7 @@ export const metadata: Metadata = {
 const drafts = [...Array(19).keys()];
 
 export default function Dashboard() {
+
   return (
     <>
       <NavBar />
