@@ -5,7 +5,6 @@ import {
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuSeparator,
-  DropdownMenuShortcut,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import Image from "next/image";
@@ -18,10 +17,13 @@ interface menuItem {
   link: string;
 }
 
+interface NavBarProps {
+  onSettingsClick: () => void;
+}
+
 const menuItems: menuItem[] = [];
 
-
-export function NavBar() {
+export function NavBar({ onSettingsClick }: NavBarProps) {
   return (
     <div className="flex h-16 items-center px-4">
       <div className="flex items-center space-x-6">
@@ -61,22 +63,14 @@ export function NavBar() {
             <DropdownMenuGroup>
               <DropdownMenuItem>
                 Profile
-                <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
               </DropdownMenuItem>
-              <DropdownMenuItem>
-                Billing
-                <DropdownMenuShortcut>⌘B</DropdownMenuShortcut>
-              </DropdownMenuItem>
-              <DropdownMenuItem>
+              <DropdownMenuItem onClick={onSettingsClick}>
                 Settings
-                <DropdownMenuShortcut>⌘S</DropdownMenuShortcut>
               </DropdownMenuItem>
-              <DropdownMenuItem>New Team</DropdownMenuItem>
             </DropdownMenuGroup>
             <DropdownMenuSeparator />
             <DropdownMenuItem>
               Log out
-              <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
