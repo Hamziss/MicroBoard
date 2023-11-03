@@ -2,11 +2,11 @@
 module.exports = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-	],
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   theme: {
     container: {
       center: true,
@@ -16,6 +16,13 @@ module.exports = {
       },
     },
     extend: {
+      boxShadow: {
+        "side-bar": "-7px 0px 19px 0px rgba(0, 0, 0, 0.25)",
+      },
+      backgroundImage: {
+        "side-bar":
+          "linear-gradient(185deg, #FFDEDE 1.21%, rgba(174, 221, 248, 0.00) 99.49%)",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -73,4 +80,4 @@ module.exports = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-}
+};

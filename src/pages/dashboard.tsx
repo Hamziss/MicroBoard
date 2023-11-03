@@ -1,5 +1,6 @@
 import { Draft } from "@/components/dashboard/draft";
 import { NavBar } from "@/components/navbar";
+import { Sidebar } from "@/components/sidebar";
 
 import { ScrollArea } from "@/components/ui/scroll-area";
 
@@ -18,7 +19,9 @@ export default function Dashboard() {
     <>
       <NavBar />
       <div className="grid lg:grid-cols-5">
-        <div className="hidden lg:block">Sidebar</div>
+        <div className="hidden lg:block">
+          <Sidebar />
+        </div>
         <div className="col-span-3 lg:col-span-4">
           <ScrollArea className="h-[calc(100vh-4rem)]  bg-[#F4F0FB] px-4 py-6 lg:px-8">
             <h2 className="text-3xl font-bold tracking-tight">Drafts</h2>
