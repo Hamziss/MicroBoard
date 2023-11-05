@@ -16,10 +16,12 @@ module.exports = {
       },
     },
     extend: {
+      padding: {
+        '360px': '360px',
+      },
       boxShadow: {
         "side-bar": "-7px 0px 19px 0px rgba(0, 0, 0, 0.25)",
       },
-
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

@@ -71,4 +71,5 @@ const Settings = ({ isVisible, onClose }: SettingsProps) => {
   );
 };
 
+
 export default Settings;
