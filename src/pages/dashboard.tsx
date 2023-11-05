@@ -1,22 +1,35 @@
 import { Draft } from "@/components/dashboard/draft";
 import { NavBar } from "@/components/navbar";
+import Settings from "@/components/settings/settings";
 import { Sidebar } from "@/components/sidebar";
+
 
 import { ScrollArea } from "@/components/ui/scroll-area";
 
 import { Metadata } from "next";
+import { useState } from "react";
 
 export const metadata: Metadata = {
   title: "Dashboard",
   description: "Dashboard",
 };
 
-const drafts = [...Array(19).keys()];
-
 export default function Dashboard() {
+  const drafts = [...Array(19).keys()];
+
+  const [isSettingsVisible, setIsSettingsVisible] = useState(false)
+
+  const handleSettingsOpen = () => {
+    setIsSettingsVisible(true)
+  }
+
+  const handleSettingsClose = () => {
+    setIsSettingsVisible(false)
+  }
   return (
     <>
-      <NavBar />
+      <Settings isVisible={isSettingsVisible} onClose={handleSettingsClose} />
+      <NavBar onSettingsClick={handleSettingsOpen} />
       <div className="flex ">
         <div className="hidden w-72 lg:block">
           <Sidebar />

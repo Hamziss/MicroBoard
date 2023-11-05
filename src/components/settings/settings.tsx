@@ -1,4 +1,4 @@
-import eclipse from "assets/userpicture.jpg";
+import eclipse from "./assets/userpicture.jpg";
 import Image from "next/image";
 import { ChangeEvent, useRef, useState } from "react";
 
@@ -23,8 +23,8 @@ const Settings = ({ isVisible, onClose }: SettingsProps) => {
 
   if (!isVisible) return null;
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-20">
-      <div className=" w-[600px] ">
+    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-20 z-50">
+      <div className=" w-[600px]">
         <div className="flex flex-col rounded bg-white p-2 text-xl  ">
           <button
             className="place-self-end text-xl font-semibold
@@ -42,12 +42,16 @@ const Settings = ({ isVisible, onClose }: SettingsProps) => {
                   className="h-28 w-28 rounded-full"
                   src={URL.createObjectURL(clickImg)}
                   alt=""
+                  width={112}
+                  height={112}
                 />
               ) : (
                 <Image
                   className="h-28 w-28 rounded-full"
                   src={eclipse.src}
                   alt=""
+                  width={112}
+                  height={112}
                 />
               )}
 
