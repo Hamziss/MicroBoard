@@ -1,5 +1,5 @@
-import eclipse from "./assets/userpicture.jpg";
 import Image from "next/image";
+import eclipse from "public/userpicture.jpg";
 import { ChangeEvent, useRef, useState } from "react";
 
 interface SettingsProps {
@@ -23,7 +23,7 @@ const Settings = ({ isVisible, onClose }: SettingsProps) => {
 
   if (!isVisible) return null;
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-20 z-50">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-20">
       <div className=" w-[600px]">
         <div className="flex flex-col rounded bg-white p-2 text-xl  ">
           <button
@@ -70,6 +70,5 @@ const Settings = ({ isVisible, onClose }: SettingsProps) => {
     </div>
   );
 };
-
 
 export default Settings;
