@@ -16,6 +16,10 @@ module.exports = {
       },
     },
     extend: {
+      boxShadow: {
+        "side-bar": "-7px 0px 19px 0px rgba(0, 0, 0, 0.25)",
+      },
+
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -72,6 +76,8 @@ module.exports = {
       },
       backgroundImage: {
         "radial-gradient": "radial-gradient(#eeeeee 2px, transparent 3px)",
+        "side-bar":
+          "linear-gradient(185deg, #FFDEDE 1.21%, rgba(174, 221, 248, 0.00) 99.49%)",
       },
       backgroundSize: {
         "25px": "25px 25px",
