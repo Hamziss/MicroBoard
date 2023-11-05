@@ -1,6 +1,5 @@
 import { Draft } from "@/components/dashboard/draft";
 import { NavBar } from "@/components/navbar";
-import { Sidebar } from "@/components/sidebar";
 
 import { ScrollArea } from "@/components/ui/scroll-area";
 
@@ -14,15 +13,12 @@ export const metadata: Metadata = {
 const drafts = [...Array(19).keys()];
 
 export default function Dashboard() {
-
   return (
     <>
       <NavBar />
-      <div className="grid lg:grid-cols-5">
-        <div className="hidden lg:block">
-          <Sidebar />
-        </div>
-        <div className="col-span-3 lg:col-span-4">
+      <div className="flex ">
+        <div className="hidden w-72 lg:block">Sidebar</div>
+        <div className="w-full">
           <ScrollArea className="h-[calc(100vh-4rem)]  bg-[#F4F0FB] px-4 py-6 lg:px-8">
             <h2 className="text-3xl font-bold tracking-tight">Drafts</h2>
             <div className="mt-8 grid grid-cols-12 gap-8">

@@ -19,10 +19,7 @@ module.exports = {
       boxShadow: {
         "side-bar": "-7px 0px 19px 0px rgba(0, 0, 0, 0.25)",
       },
-      backgroundImage: {
-        "side-bar":
-          "linear-gradient(185deg, #FFDEDE 1.21%, rgba(174, 221, 248, 0.00) 99.49%)",
-      },
+
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -76,6 +73,14 @@ module.exports = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+      },
+      backgroundImage: {
+        "radial-gradient": "radial-gradient(#eeeeee 2px, transparent 3px)",
+        "side-bar":
+          "linear-gradient(185deg, #FFDEDE 1.21%, rgba(174, 221, 248, 0.00) 99.49%)",
+      },
+      backgroundSize: {
+        "25px": "25px 25px",
       },
     },
   },
