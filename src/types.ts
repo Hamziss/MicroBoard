@@ -14,3 +14,34 @@ export type AppPropsWithLayout = AppProps<{
 };
 
 export type Role = "ADMIN" | "USER";
+
+// --------------- Shapes --------------- //
+export interface Color {
+  r: number;
+  g: number;
+  b: number;
+}
+
+export enum LayerType {
+  Rectangle,
+  Circle,
+}
+
+export type Layer = RectangleLayer | CircleLayer;
+
+export interface RectangleLayer {
+  type: LayerType.Rectangle;
+  x: number;
+  y: number;
+  height: number;
+  width: number;
+  fill: Color;
+}
+
+export interface CircleLayer {
+  type: LayerType.Circle;
+  x: number;
+  y: number;
+  radius: number;
+  fill: Color;
+}
