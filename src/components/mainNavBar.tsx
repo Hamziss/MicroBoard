@@ -1,9 +1,10 @@
 import MainLeft from "./ui/mainLeft"
 import MainRigth from "./ui/mainRight"
 import MainCenter from "./ui/mainCenter"
+
 export function MainNavBar() {
     return (
-        <div className="bg-gray-400 px-8 py-5 flex justify-between align-center h-20">
+        <div className="flex justify-between items-center h-12 px-8 py-0 mt-2">
             <MainLeft />
             <MainCenter />
             <MainRigth />
