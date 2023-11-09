@@ -1,7 +1,8 @@
-
 const MainRight = () => {
     return (
-        <div>main right</div>
+        <div className="right-nav-container">
+            main right
+        </div>
     )
 }
 
