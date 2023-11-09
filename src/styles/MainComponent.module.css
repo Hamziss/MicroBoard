@@ -1,0 +1,9 @@
+.centerIcon {
+  @apply flex h-[1.8rem] w-[1.8rem] items-center justify-center text-slate-700 hover:cursor-pointer hover:rounded-md hover:bg-slate-100;
+}
+.rightNavContainer {
+  @apply flex w-[8.6rem] items-center justify-between;
+}
+.share {
+  @apply flex h-[2.3rem] w-[5.6rem] cursor-pointer items-center justify-between rounded-md border border-slate-200 bg-[white] px-[7px] py-0 text-base text-slate-700 hover:shadow-lg;
+}

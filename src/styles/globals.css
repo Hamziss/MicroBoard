@@ -74,7 +74,3 @@
     @apply bg-background text-foreground;
   }
 }
-
-.center-icon {
-  @apply flex h-[1.8rem] w-[1.8rem] items-center justify-center text-slate-700 hover:cursor-pointer hover:rounded-md hover:bg-slate-100;
-}
