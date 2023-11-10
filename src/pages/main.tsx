@@ -14,7 +14,7 @@ const Main = () => {
   }
 
   return (
-    <div className="h-screen bg-radial-gradient bg-25px">
+    <div className="h-screen bg-radial-gradient bg-25px overflow-hidden">
       <Canvas shapes={JSON.stringify(shapes)} />
       <MainNavBar />
       <BottomRight />
