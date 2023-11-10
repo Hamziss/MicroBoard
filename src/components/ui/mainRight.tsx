@@ -10,11 +10,10 @@ import {
 import { Share } from 'lucide-react'
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
-import styles from '@/styles/MainComponent.module.css'
 
 const MainRight = () => {
     return (
-        <div className={styles.rightNavContainer}>
+        <div className="flex w-[8.6rem] items-center justify-between">
             <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                     <Button variant="ghost" className="relative h-8 w-8 rounded-full">
