@@ -47,8 +47,8 @@ const MainRight = () => {
                     </DropdownMenuItem>
                 </DropdownMenuContent>
             </DropdownMenu>
-            <div className="flex h-[2.3rem] w-[5.6rem] cursor-pointer items-center justify-between rounded-md border border-slate-200 bg-[white] px-[7px] py-0 text-base text-slate-700 hover:shadow-lg">
-                <Share className="h-[1.2rem] w-8" />
+            <div className="flex h-[2.3rem] w-[5.6rem] cursor-pointer items-center justify-between rounded-md border border-slate-200 bg-[white] px-[7px] py-0 text-base text-slate-700 hover:shadow-lg hover:bg-slate-100">
+                <Share size={20} className="h-[1.2rem] w-8" />
                 <input type="button" value="Share" className='cursor-pointer' />
             </div>
         </div>
