@@ -16,6 +16,9 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        daniel: ["Daniel Black"],
+      },
       padding: {
         '360px': '360px',
       },

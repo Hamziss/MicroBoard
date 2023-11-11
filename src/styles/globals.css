@@ -35,6 +35,13 @@
     --radius: 0.5rem;
   }
 
+  @layer base {
+    @font-face {
+      font-family: "Daniel Black";
+      src: url(/public/danielbk.ttf);
+    }
+  }
+
   .dark {
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
