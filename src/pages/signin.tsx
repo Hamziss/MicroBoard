@@ -3,6 +3,8 @@ import bottom_left from "../assets/images/bottom_left.svg";
 import top_left from "../assets/images/top_left.svg";
 import Image from "next/image";
 import icon from "../assets/images/icon.svg";
+import google_svg from "../assets/icons/google.svg";
+import github_svg from "../assets/icons/github.svg";
 
 import { Separator } from "@/components/ui/separator";
 import { Input } from "@/components/ui/input";
@@ -13,7 +15,7 @@ export default function Sign_in() {
   return (
     <>
       <section className="h-screen w-screen px-20">
-        <div className="absolute left-0 top-0 w-32 lg:w-44">
+        <div className="absolute left-0 top-0 w-32 sm:w-44">
           <Image src={top_left as string} alt="" />
         </div>
         <div className="flex h-full w-full flex-col items-center justify-center lg:flex-row lg:justify-between lg:gap-x-52">
@@ -24,14 +26,14 @@ export default function Sign_in() {
                   <Image src={icon as string} alt="" />
                 </div>
 
-                <h2 className="font-daniel bg-gradient-to-r from-[#004DFF] via-[#712B97] to-[#FF0014] bg-clip-text text-lg leading-normal text-transparent">
+                <h2 className="bg-gradient-to-r from-[#004DFF] via-[#712B97] to-[#FF0014] bg-clip-text font-daniel text-lg leading-normal text-transparent">
                   MicroBoard
                 </h2>
               </div>
               <h2 className="text-2xl font-semibold">Sign in account</h2>
             </div>
 
-            <div className="flex w-full max-w-md flex-col items-start justify-center gap-6 lg:max-w-xs">
+            <form className="flex w-full max-w-md flex-col items-start justify-center gap-6 lg:max-w-xs">
               <div className="flex w-full max-w-md flex-col items-start gap-1.5 lg:max-w-xs">
                 <Label htmlFor="email">Email</Label>
                 <Input type="email" id="email" placeholder="Enter your email" />
@@ -44,20 +46,23 @@ export default function Sign_in() {
                 <Button
                   variant="outline"
                   className="h-12 w-1/2 rounded-lg bg-[#E7F2F5] shadow-sm"
+                  type="button"
                 >
-                  Google
+                  <Image src={google_svg as string} alt="google logo" />
                 </Button>
 
                 <Button
                   variant="outline"
                   className="h-12 w-1/2 rounded-lg bg-[#E7F2F5] shadow-sm"
+                  type="button"
                 >
-                  Github
+                  <Image src={github_svg as string} alt="github logo" />
                 </Button>
               </div>
               <Button
                 variant="outline"
                 className="w-full bg-[#141415] font-light text-white shadow-sm"
+                type="submit"
               >
                 Continue
               </Button>
@@ -75,7 +80,7 @@ export default function Sign_in() {
                   </span>
                 </p>
               </div>
-            </div>
+            </form>
             <div className="absolute bottom-0 lg:w-[31rem]">
               <Image src={bottom_left as string} alt="" />
             </div>
