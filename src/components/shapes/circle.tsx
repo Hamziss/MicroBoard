@@ -1,14 +1,11 @@
-import { Color, CircleLayer } from "@/types";
+import { CircleLayer } from "@/types";
+import { colorToCss } from "@/utils/utils";
 
 interface Props {
-  id: string;
   layer: CircleLayer;
 }
 
-const colorToCSS = (color: Color): string =>
-  `rgb(${color.r}, ${color.g}, ${color.b})`;
-
-export const Circle = ({ layer, id }: Props) => {
+export const Circle = ({ layer }: Props) => {
   const { x, y, radius, fill } = layer;
 
   return (
@@ -17,12 +14,11 @@ export const Circle = ({ layer, id }: Props) => {
       style={{
         position: "absolute",
         transform: `translate(${x}px, ${y}px)`,
-        backgroundColor: fill ? colorToCSS(fill) : "#CCC",
+        backgroundColor: fill ? colorToCss(fill) : "#CCC",
         borderRadius: "50%",
         width: radius * 2 + "px",
         height: radius * 2 + "px",
       }}
-      id={id}
     />
   );
 };

@@ -2,7 +2,7 @@ import "@/styles/globals.css";
 import { AppPropsWithLayout } from "@/types";
 import { SessionProvider } from "next-auth/react";
 import { RoomProvider } from "../liveblocks.config";
-import { LiveMap } from "@liveblocks/client";
+import { LiveMap, LiveObject, LsonObject } from "@liveblocks/client";
 
 export default function App({
   Component,
@@ -15,7 +15,7 @@ export default function App({
         id="microBoard"
         initialPresence={{}}
         initialStorage={{
-          shapes: new LiveMap(),
+          layers: new LiveMap<string, LiveObject<LsonObject>>(),
         }}
       >
         {getLayout(<Component {...pageProps} />)}

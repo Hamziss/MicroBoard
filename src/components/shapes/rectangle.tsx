@@ -1,14 +1,11 @@
-import { Color, RectangleLayer } from "@/types";
+import { RectangleLayer } from "@/types";
+import { colorToCss } from "@/utils/utils";
 
 interface Props {
-  id: string;
   layer: RectangleLayer;
 }
 
-const colorToCSS = (color: Color): string =>
-  `rgb(${color.r}, ${color.g}, ${color.b})`;
-
-export const Rectangle = ({ layer, id }: Props) => {
+export const Rectangle = ({ layer }: Props) => {
   const { x, y, width, height, fill } = layer;
 
   return (
@@ -17,11 +14,10 @@ export const Rectangle = ({ layer, id }: Props) => {
       style={{
         position: "absolute",
         transform: `translate(${x}px, ${y}px)`,
-        backgroundColor: fill ? colorToCSS(fill) : "#CCC",
+        backgroundColor: fill ? colorToCss(fill) : "#CCC",
         width: width + "px",
         height: height + "px",
       }}
-      id={id}
     />
   );
 };

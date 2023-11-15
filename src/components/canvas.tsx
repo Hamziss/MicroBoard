@@ -1,7 +1,8 @@
+import { Layer } from "@/types";
 import React from "react";
 
 const Canvas = ({ shapes }: { shapes: string }) => {
-  // const parsedShapes: person = JSON.parse(shapes);
+  const parsedShapes = JSON.parse(shapes) as Layer;
 
   return <div></div>;
 };

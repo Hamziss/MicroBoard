@@ -3,9 +3,9 @@ import Canvas from "@/components/canvas";
 import { useStorage } from "@/liveblocks.config";
 import BottomRight from "@/components/ui/bottomRight";
 const Main = () => {
-  const shapes = useStorage((root) => root.shapes);
+  const layers = useStorage((root) => root.layers);
 
-  if (shapes == null) {
+  if (layers == null) {
     return (
       <div className="flex h-screen w-full items-center justify-center">
         Loading
@@ -14,8 +14,8 @@ const Main = () => {
   }
 
   return (
-    <div className="h-screen bg-radial-gradient bg-25px overflow-hidden">
-      <Canvas shapes={JSON.stringify(shapes)} />
+    <div className="h-screen overflow-hidden bg-radial-gradient bg-25px">
+      <Canvas shapes={JSON.stringify(layers)} />
       <MainNavBar />
       <BottomRight />
     </div>
